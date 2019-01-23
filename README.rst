@@ -1,6 +1,6 @@
-========
-play_sql
-========
+=============
+play_selenium
+=============
 
 
 .. image:: https://travis-ci.org/davidemoro/play_selenium.svg?branch=master
@@ -14,7 +14,8 @@ play_sql
 .. image:: https://codecov.io/gh/davidemoro/play_selenium/branch/master/graph/badge.svg
     :target: https://codecov.io/gh/davidemoro/play_selenium
 
-pytest-play plugin driving browsers using Selenium commands. Selenium grid compatible.
+pytest-play plugin driving browsers using Selenium/Splinter under the hood.
+Selenium grid compatible and implicit auto wait actions for more robust scenarios with less pain.
 
 More info and examples on:
 
