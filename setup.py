@@ -15,6 +15,7 @@ def read(fname):
 
 
 install_requires = [
+    'pytest-play>=2.0',
     'pytest>=3.0.7,<4.0',
     'pytest-variables[yaml]',
     'pytest-pypom-navigation',
@@ -22,6 +23,7 @@ install_requires = [
 ]
 
 tests_require = [
+    'pytest',
     'pytest-cov',
     'mock',
     'zope.interface',
