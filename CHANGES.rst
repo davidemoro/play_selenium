@@ -1,7 +1,13 @@
 Changelog
 =========
 
-0.0.2 (unreleased)
+0.0.3 (unreleased)
+------------------
+
+- Nothing changed yet.
+
+
+0.0.2 (2019-02-18)
 ------------------
 
 - Remove pytest version constraint (added compatibility with pytest>=4)
