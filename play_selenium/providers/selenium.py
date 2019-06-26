@@ -68,7 +68,7 @@ class SplinterCommandProvider(BaseProvider):
             condition = command.get('condition', None)
             skip = False
             if condition is not None:
-                expr = args[0].engine.parametrizer.parametrize(condition)
+                expr = args[0].engine.parametrize(condition)
                 if not args[0]._navigation.page.driver.evaluate_script(
                         expr):
                     skip = True
@@ -193,7 +193,7 @@ class SplinterCommandProvider(BaseProvider):
         """ verifyText """
         selector = self.locator_translate(command['locator'])
         negated = command.get('negated', False)
-        pattern = self.engine.parametrizer.parametrize(command['text'])
+        pattern = self.engine.parametrize(command['text'])
         element = self._navigation.page.find_element(*selector)
         match = re.search(pattern, element.text)
         assert not negated and match
@@ -202,7 +202,7 @@ class SplinterCommandProvider(BaseProvider):
     def command_storeEval(self, command, **kwargs):
         """ storeEval """
         variable = command['variable']
-        script = self.engine.parametrizer.parametrize(command['script'])
+        script = self.engine.parametrize(command['script'])
         value = self._navigation.page.driver.evaluate_script(script)
         self.engine.variables[variable] = value
 
@@ -210,20 +210,20 @@ class SplinterCommandProvider(BaseProvider):
     def command_verifyEval(self, command, **kwargs):
         """ verifyEval """
         value = command['value']
-        script = self.engine.parametrizer.parametrize(command['script'])
+        script = self.engine.parametrize(command['script'])
         assert value == self._navigation.page.driver.evaluate_script(
             script)
 
     @condition
     def command_eval(self, command, **kwargs):
         """ eval """
-        script = self.engine.parametrizer.parametrize(command['script'])
+        script = self.engine.parametrize(command['script'])
         self._navigation.page.driver.evaluate_script(script)
 
     @condition
     def command_waitUntilCondition(self, command, **kwargs):
         """ waitUntilCondition  """
-        script = self.engine.parametrizer.parametrize(command['script'])
+        script = self.engine.parametrize(command['script'])
         self._navigation.page.wait.until(
             lambda s: self._navigation.page.driver.evaluate_script(
                 script))

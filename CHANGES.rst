@@ -4,7 +4,8 @@ Changelog
 0.0.3 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- according to new ``pytest-play`` versions (>= 2.0) the ``self.engine.parametrize`` should
+  be used instead of accessing ``self.engine.parmetrizer``
 
 
 0.0.2 (2019-02-18)
