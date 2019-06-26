@@ -1,7 +1,7 @@
 Changelog
 =========
 
-0.0.3 (unreleased)
+0.0.3 (2019-06-26)
 ------------------
 
 - according to new ``pytest-play`` versions (>= 2.0) the ``self.engine.parametrize`` should
